@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import logo from "@/assets/thiaw-logo.jpeg.asset.json";
+import logo from "@/assets/thiaw-logo.jpeg";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -23,7 +23,7 @@ export function Header() {
       className="glass-bar fixed inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="Thiaw Agro Élevage logo" width={48} height={48}
+          <img src={logo} alt="Thiaw Agro Élevage logo" width={48} height={48}
             className="size-11 rounded-xl object-cover shadow-[var(--shadow-soft)]" />
           <span className="leading-tight">
             <span className="block font-display text-base font-bold tracking-tight text-secondary">Thiaw Agro Élevage</span>

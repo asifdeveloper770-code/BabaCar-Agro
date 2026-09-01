@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 
-import logo from "@/assets/thiaw-logo.jpeg.asset.json";
+import logo from "@/assets/thiaw-logo.jpeg";
 
 export function Footer() {
     const { t } = useLanguage();
@@ -13,7 +13,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={logo.url}
+              src={logo}
               alt="Thiaw Agro Élevage logo"
               width={56}
               height={56}
