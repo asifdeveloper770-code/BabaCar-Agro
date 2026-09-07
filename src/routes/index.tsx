@@ -7,7 +7,7 @@ import { ArrowRight, Leaf, Sprout, Truck } from "lucide-react";
 import { Layout } from "@/components/site/Layout";
 import { RevealGroup, RevealItem, fadeUp, staggerParent } from "@/components/site/Reveal";
 import { TiltCard } from "@/components/site/TiltCard";
-import owner from "@/assets/owner-portrait.jpg";
+import owner from "@/assets/hero.png";
 import farm from "@/assets/farm-landscape.jpg";
 import chickens from "@/assets/product-chickens.jpg";
 import fruits from "@/assets/product-fruits.jpg";

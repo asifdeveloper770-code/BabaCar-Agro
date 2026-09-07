@@ -193,6 +193,12 @@ function Contact() {
                 <Phone className="size-5 text-primary" /> 901-319-9938
               </a>
               <a
+                href="tel:+19013199938"
+                className="mt-3 flex items-center gap-2 text-lg font-bold text-secondary"
+              >
+                <Phone className="size-5 text-primary" /> 77-754-8004
+              </a>
+              <a
                 href="mailto:thiaw@att.net"
                 className="mt-2 flex items-center gap-2 text-lg font-bold text-secondary"
               >

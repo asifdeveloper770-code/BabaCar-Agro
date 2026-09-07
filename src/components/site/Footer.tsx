@@ -40,7 +40,10 @@ export function Footer() {
         <div className="text-sm">
           <p className="mb-3 font-semibold tracking-wide uppercase opacity-70">{t("footer.getInTouch")}</p>
           <a href="tel:+19013199938" className="flex items-center gap-2 opacity-90">
-            <Phone className="size-4" /> 901-319-9938
+            <Phone className="size-4" /> 1-901-319-9938
+          </a>
+          <a href="tel:+777548004" className="flex items-center gap-2 opacity-90">
+            <Phone className="size-4" /> 77-754-8004
           </a>
           <a href="mailto:thiaw@att.net" className="mt-2 flex items-center gap-2 opacity-90">
             <Mail className="size-4" /> thiaw@att.net

@@ -28,7 +28,7 @@ export function Header() {
               className="h-full w-full object-contain" />
           </div>
           <span className="leading-tight">
-            <span className="block font-display text-xl font-bold tracking-tight text-secondary">Thiaw Agro Élevage</span>
+            <span className="block font-display text-xl font-bold tracking-tight text-secondary">Darou Thiaw Agro Élevage</span>
             <span className="block text-xs tracking-[0.18em] text-muted-foreground uppercase">{t("footer.subtitle")}</span>
           </span>
         </Link>
