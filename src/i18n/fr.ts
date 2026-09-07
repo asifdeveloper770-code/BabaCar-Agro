@@ -1,6 +1,6 @@
 import type { TranslationSchema } from "@/i18n/en";
 const fr: TranslationSchema = {
-  nav: { home: "Accueil", about: "À propos", services: "Services", coming: "À venir", contact: "Contact", order: "Commander", menuAria: "Ouvrir le menu", languageAria: "Changer de langue" },
+  nav: { home: "Accueil", about: "À propos", services: "Services", coming: "À venir", contact: "le contact", order: "Commander", menuAria: "Ouvrir le menu", languageAria: "Changer de langue" },
   languageNames: { en: "Anglais", fr: "Français" },
   home: {
     eyebrow: "Babacar Thiaw · Fondateur",
@@ -14,25 +14,25 @@ const fr: TranslationSchema = {
     vegetables: "Légumes", vegetablesCopy: "Des caisses préparées sur commande pour les cuisines et les marchés.",
     fruits: "Fruits", fruitsCopy: "Des récoltes de saison cueillies à pleine maturité.",
     seeAll: "Voir tous les produits et services",
-    founderAlt: "Babacar Thiaw, fondateur de Thiaw Agro Élevage, à la ferme",
+    founderAlt: "Babacar Thiaw, fondateur de Darou Thiaw Agro Élevage, à la ferme",
     founderTitle: "Babacar Thiaw", founderCopy: "Fondateur — bâtir un héritage agro-élevage au Sénégal."
   },
   about: {
     eyebrow: "À propos", title1: "La qualité d'élevage,", title2: "le goût du terroir.",
-    lead: "Thiaw Agro Élevage est une ferme en activité dirigée par Babacar Thiaw — fondée sur un élevage patient, une terre réelle et des relations qui durent plus longtemps qu'une simple livraison.",
-    beginning: "Les débuts", beginningTitle: "Un poulailler, une promesse", beginningCopy: "Thiaw Agro Élevage a commencé avec un petit troupeau et un refus de faire des compromis : des volailles saines, une alimentation propre, le plein air et une transparence totale avec chaque client.",
+    lead: "Darou Thiaw Agro Élevage est une ferme en activité dirigée par Babacar Thiaw — fondée sur un élevage patient, une terre réelle et des relations qui durent plus longtemps qu'une simple livraison.",
+    beginning: "Les débuts", beginningTitle: "Un poulailler, une promesse", beginningCopy: "Darou Thiaw Agro Élevage a commencé avec un petit troupeau et un refus de faire des compromis : des volailles saines, une alimentation propre, le plein air et une transparence totale avec chaque client.",
     land: "Développer la terre", landTitle: "De la volaille à la récolte complète", landCopy: "Les arbres fruitiers et les parcelles de légumes ont suivi les poulaillers. Aujourd'hui, la ferme pratique une agriculture mixte afin que ses partenaires puissent trouver plusieurs catégories auprès d'un fournisseur de confiance.",
     today: "Aujourd'hui", todayTitle: "Au service des cuisines et des communautés", todayCopy: "Nous approvisionnons familles, restaurants et revendeurs avec des volumes réguliers et une qualité constante — tout en mettant à jour les disponibilités au fil des saisons.",
     quote: "\"Nourrissez les gens comme vous nourririez votre propre famille. Tout le reste en découle.\""
   },
   services: {
-    eyebrow: "Services", title1: "Tout ce que nous élevons,", title2: "prêt pour votre commande.",
+    eyebrow: "les services", title1: "Tout ce que nous élevons,", title2: "prêt pour votre commande.",
     lead: "Que vous cuisiniez pour une famille, une salle de restaurant ou un étal de marché, nous adaptons la commande à votre façon d'acheter.",
     chickens: "Poulets & volailles", chickensCopy: "Volailles vivantes et prêtes à cuire, élevées en plein air avec une alimentation saine.",
     vegetables: "Légumes", vegetablesCopy: "Tomates, oignons, gombo et légumes-feuilles récoltés selon votre calendrier de commande.",
     fruits: "Fruits", fruitsCopy: "Fruits de saison cueillis à maturité et conditionnés pour une fraîcheur optimale.",
     agriculture: "Agriculture", agricultureCopy: "Cultures et production agricole, avec planification d'approvisionnement pour les contrats importants.",
-    restaurants: "Restaurants", resellers: "Revendeurs", consumers: "Particuliers", wholesale: "Vente en gros", partners: "Partenaires",
+    restaurants: "le restau", resellers: "Revendeurs", consumers: "Particuliers", wholesale: "Vente en gros", partners: "Partenaires",
     consumerCopy: "Caisses familiales et commandes à l'unité, livrées fraîches avec des prix clairs.",
     restaurantCopy: "Livraisons hebdomadaires régulières, qualité constante et volumes fiables.",
     resellerCopy: "Lots en volume, tarifs de gros et mises à jour des disponibilités avant chaque cycle.",

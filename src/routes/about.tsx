@@ -10,13 +10,13 @@ import owner from "@/assets/owner-portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Thiaw Agro Élevage" },
+      { title: "About Us — Darou Thiaw Agro Élevage" },
       {
         name: "description",
         content:
-          "The story behind Thiaw Agro Élevage: a family farm raising poultry and growing fruits and vegetables with honest, careful practices.",
+          "The story behind Darou Thiaw Agro Élevage: a family farm raising poultry and growing fruits and vegetables with honest, careful practices.",
       },
-      { property: "og:title", content: "About Thiaw Agro Élevage" },
+      { property: "og:title", content: "About Darou Thiaw Agro Élevage" },
       {
         property: "og:description",
         content: "A family farm built on quality breeding and the taste of the terroir.",

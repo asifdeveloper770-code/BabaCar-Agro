@@ -14,13 +14,13 @@ import chickens from "@/assets/product-chickens.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Products & Service — Thiaw Agro Élevage" },
+      { title: "Products & Service — Darou Thiaw Agro Élevage" },
       {
         name: "description",
         content:
-          "Agriculture, fruits, vegetables and chickens from Thiaw Agro Élevage — retail crates for consumers, standing orders for restaurants, and bulk pricing for resellers.",
+          "Agriculture, fruits, vegetables and chickens from Darou Thiaw Agro Élevage — retail crates for consumers, standing orders for restaurants, and bulk pricing for resellers.",
       },
-      { property: "og:title", content: "Products & Service — Thiaw Agro Élevage" },
+      { property: "og:title", content: "Products & Service — Darou Thiaw Agro Élevage" },
       {
         property: "og:description",
         content: "Farm-direct supply for consumers, restaurants and resellers.",

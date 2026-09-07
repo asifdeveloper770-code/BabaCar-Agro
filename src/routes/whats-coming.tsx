@@ -10,13 +10,13 @@ import { RevealGroup, RevealItem } from "@/components/site/Reveal";
 export const Route = createFileRoute("/whats-coming")({
   head: () => ({
     meta: [
-      { title: "What is Coming — Invest with Thiaw Agro Élevage" },
+      { title: "What is Coming — Invest with Darou Thiaw Agro Élevage" },
       {
         name: "description",
         content:
-          "Upcoming expansion at Thiaw Agro Élevage and investment opportunities for immigrants who want a stake in productive farmland and poultry operations.",
+          "Upcoming expansion at Darou Thiaw Agro Élevage and investment opportunities for immigrants who want a stake in productive farmland and poultry operations.",
       },
-      { property: "og:title", content: "What is Coming — Invest with Thiaw Agro Élevage" },
+      { property: "og:title", content: "What is Coming — Invest with Darou   Thiaw Agro Élevage" },
       {
         property: "og:description",
         content: "Expansion phases and investment openings for the diaspora community.",

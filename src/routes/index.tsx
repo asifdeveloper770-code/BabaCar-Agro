@@ -16,13 +16,13 @@ import vegetables from "@/assets/product-vegetables.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Thiaw Agro Élevage — Farm-Fresh Poultry, Fruits & Vegetables" },
+      { title: "Darou Thiaw Agro Élevage — Farm-Fresh Poultry, Fruits & Vegetables" },
       {
         name: "description",
         content:
-          "Thiaw Agro Élevage supplies farm-direct chickens, fruits and vegetables to families, restaurants and resellers. La qualité d'élevage, le goût du terroir.",
+          "Darou Thiaw Agro Élevage supplies farm-direct chickens, fruits and vegetables to families, restaurants and resellers. La qualité d'élevage, le goût du terroir.",
       },
-      { property: "og:title", content: "Thiaw Agro Élevage — Farm-Fresh from Our Land to Your Table" },
+      { property: "og:title", content: "Darou Thiaw Agro Élevage — Farm-Fresh from Our Land to Your Table" },
       {
         property: "og:description",
         content:
@@ -74,8 +74,7 @@ function Home() {
               <span className="text-ember">{t("home.hero2")}</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="mt-6 max-w-lg text-lg text-muted-foreground">
-              My intention is simple: raise poultry and grow food the honest way, then bring it
-              straight to the families, restaurants and resellers who care about quality.
+              {t("home.heroLead")}
             </motion.p>
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <Link

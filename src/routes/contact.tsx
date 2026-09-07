@@ -10,16 +10,16 @@ import { RevealGroup, RevealItem } from "@/components/site/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Ordering — Thiaw Agro Élevage" },
+      { title: "Contact & Ordering — Darou Thiaw Agro Élevage" },
       {
         name: "description",
         content:
-          "Order chickens, fruits and vegetables from Thiaw Agro Élevage, or ask about investing. Call 901-319-9938 or send your order details.",
+          "Order chickens, fruits and vegetables from Darou Thiaw Agro Élevage, or ask about investing. Call 901-319-9938 or send your order details.",
       },
-      { property: "og:title", content: "Contact & Ordering — Thiaw Agro Élevage" },
+      { property: "og:title", content: "Contact & Ordering — Darou Thiaw Agro Élevage" },
       {
         property: "og:description",
-        content: "Send your order or investment enquiry to Thiaw Agro Élevage.",
+        content: "Send your order or investment enquiry to Darou Thiaw Agro Élevage.",
       },
     ],
   }),

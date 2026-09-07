@@ -13,13 +13,13 @@ const en = {
     vegetables: "Vegetables", vegetablesCopy: "Cut-to-order crates for kitchens and markets.",
     fruits: "Fruits", fruitsCopy: "Seasonal harvest picked at peak ripeness.",
     seeAll: "See all products & services",
-    founderAlt: "Babacar Thiaw, founder of Thiaw Agro Élevage, on the farm",
+    founderAlt: "Babacar Thiaw, founder of Darou Thiaw Agro Élevage, on the farm",
     founderTitle: "Babacar Thiaw", founderCopy: "Founder — building an agro-élevage legacy in Senegal."
   },
   about: {
     eyebrow: "About us", title1: "La qualité d'élevage,", title2: "le goût du terroir.",
-    lead: "Thiaw Agro Élevage is a working farm led by Babacar Thiaw — built on patient breeding, real soil, and relationships that last longer than a single delivery.",
-    beginning: "The beginning", beginningTitle: "One coop, one promise", beginningCopy: "Thiaw Agro Élevage started with a small flock and a refusal to compromise: healthy birds, clean feed, open ground, and full transparency with every buyer.",
+    lead: "Darou Thiaw Agro Élevage is a working farm led by Babacar Thiaw — built on patient breeding, real soil, and relationships that last longer than a single delivery.",
+    beginning: "The beginning", beginningTitle: "One coop, one promise", beginningCopy: "Darou Thiaw Agro Élevage started with a small flock and a refusal to compromise: healthy birds, clean feed, open ground, and full transparency with every buyer.",
     land: "Growing the land", landTitle: "From poultry to full harvest", landCopy: "Fruit trees and vegetable beds followed the coops. Today the farm runs mixed agriculture so partners can source several categories from one supplier they already trust.",
     today: "Today", todayTitle: "Serving kitchens and communities", todayCopy: "We supply households, restaurants and resellers with steady volumes and consistent quality — and we keep the availability list updated as the seasons change.",
     quote: "\"Feed people the way you would feed your own family. Everything else follows.\""

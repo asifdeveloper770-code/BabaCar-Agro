@@ -17,7 +17,7 @@ export function Footer() {
                           className="h-full w-full object-contain" />
                       </div>
             <div>
-              <p className="font-display text-lg font-bold">Thiaw Agro Élevage</p>
+              <p className="font-display text-lg font-bold">Darou Thiaw Agro Élevage</p>
               <p className="text-sm opacity-80">{t("footer.subtitle")}</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs opacity-70">
-        © {new Date().getFullYear()} Thiaw Agro Élevage. {t("footer.rights")}
+        © {new Date().getFullYear()} Darou Thiaw Agro Élevage. {t("footer.rights")}
       </div>
     </footer>
   );
