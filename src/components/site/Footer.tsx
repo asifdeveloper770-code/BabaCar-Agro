@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 
-import logo from "@/assets/thiaw-logo.jpeg";
+import logo from "@/assets/thiaw-logo.png";
 
 export function Footer() {
     const { t } = useLanguage();
@@ -12,14 +12,10 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="Thiaw Agro Élevage logo"
-              width={56}
-              height={56}
-              loading="lazy"
-              className="size-14 rounded-xl object-cover"
-            />
+           <div className="h-20 w-20 flex-shrink-0 flex items-center justify-center rounded-2xl bg-card shadow-[var(--shadow-soft)]  overflow-hidden border border-border">
+                        <img src={logo} alt="Darou Thiaw Agro Élevage logo"
+                          className="h-full w-full object-contain" />
+                      </div>
             <div>
               <p className="font-display text-lg font-bold">Thiaw Agro Élevage</p>
               <p className="text-sm opacity-80">{t("footer.subtitle")}</p>
