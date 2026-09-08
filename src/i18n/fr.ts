@@ -3,7 +3,7 @@ const fr: TranslationSchema = {
   nav: { home: "Accueil", about: "À propos", services: "Services", coming: "À venir", contact: "le contact", order: "Commander", menuAria: "Ouvrir le menu", languageAria: "Changer de langue" },
   languageNames: { en: "Anglais", fr: "Français" },
   home: {
-    eyebrow: "Babacar Thiaw · Fondateur",
+    eyebrow: "Darou Thiaw · Fondateur",
     hero1: "Nous le cultivons,", hero2: "vous goûtez le terroir.",
     heroLead: "Mon intention est simple : élever des volailles et cultiver des produits de manière honnête, puis les apporter directement aux familles, restaurants et revendeurs qui recherchent la qualité.",
     order: "Passer une commande", invest: "Opportunités d'investissement",
@@ -14,12 +14,12 @@ const fr: TranslationSchema = {
     vegetables: "Légumes", vegetablesCopy: "Des caisses préparées sur commande pour les cuisines et les marchés.",
     fruits: "Fruits", fruitsCopy: "Des récoltes de saison cueillies à pleine maturité.",
     seeAll: "Voir tous les produits et services",
-    founderAlt: "Babacar Thiaw, fondateur de Darou Thiaw Agro Élevage, à la ferme",
-    founderTitle: "Babacar Thiaw", founderCopy: "Fondateur — bâtir un héritage agro-élevage au Sénégal."
+    founderAlt: "Darou Thiaw, fondateur de Darou Thiaw Agro Élevage, à la ferme",
+    founderTitle: "Darou Thiaw", founderCopy: "Fondateur — bâtir un héritage agro-élevage au Sénégal."
   },
   about: {
     eyebrow: "À propos", title1: "La qualité d'élevage,", title2: "le goût du terroir.",
-    lead: "Darou Thiaw Agro Élevage est une ferme en activité dirigée par Babacar Thiaw — fondée sur un élevage patient, une terre réelle et des relations qui durent plus longtemps qu'une simple livraison.",
+    lead: "Darou Thiaw Agro Élevage est une ferme en activité dirigée par Darou Thiaw — fondée sur un élevage patient, une terre réelle et des relations qui durent plus longtemps qu'une simple livraison.",
     beginning: "Les débuts", beginningTitle: "Un poulailler, une promesse", beginningCopy: "Darou Thiaw Agro Élevage a commencé avec un petit troupeau et un refus de faire des compromis : des volailles saines, une alimentation propre, le plein air et une transparence totale avec chaque client.",
     land: "Développer la terre", landTitle: "De la volaille à la récolte complète", landCopy: "Les arbres fruitiers et les parcelles de légumes ont suivi les poulaillers. Aujourd'hui, la ferme pratique une agriculture mixte afin que ses partenaires puissent trouver plusieurs catégories auprès d'un fournisseur de confiance.",
     today: "Aujourd'hui", todayTitle: "Au service des cuisines et des communautés", todayCopy: "Nous approvisionnons familles, restaurants et revendeurs avec des volumes réguliers et une qualité constante — tout en mettant à jour les disponibilités au fil des saisons.",

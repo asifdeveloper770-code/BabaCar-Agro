@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { ArrowRight, Leaf, Sprout, Truck } from "lucide-react";
-
 import { Layout } from "@/components/site/Layout";
 import { RevealGroup, RevealItem, fadeUp, staggerParent } from "@/components/site/Reveal";
 import { TiltCard } from "@/components/site/TiltCard";

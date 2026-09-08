@@ -2,7 +2,7 @@ const en = {
   nav: { home: "Home", about: "About Us", services: "Service", coming: "What is Coming", contact: "Contact", order: "Order now", menuAria: "Toggle menu", languageAria: "Change language" },
   languageNames: { en: "English", fr: "French" },
   home: {
-    eyebrow: "Babacar Thiaw · Founder",
+    eyebrow: "Darou Thiaw · Founder",
     hero1: "We grow it,", hero2: "you taste the terroir.",
     heroLead: "My intention is simple: raise poultry and grow food the honest way, then bring it straight to the families, restaurants and resellers who care about quality.",
     order: "Place an order", invest: "Investment opportunities",
@@ -13,12 +13,12 @@ const en = {
     vegetables: "Vegetables", vegetablesCopy: "Cut-to-order crates for kitchens and markets.",
     fruits: "Fruits", fruitsCopy: "Seasonal harvest picked at peak ripeness.",
     seeAll: "See all products & services",
-    founderAlt: "Babacar Thiaw, founder of Darou Thiaw Agro Élevage, on the farm",
-    founderTitle: "Babacar Thiaw", founderCopy: "Founder — building an agro-élevage legacy in Senegal."
+    founderAlt: "Darou Thiaw, founder of Darou Thiaw Agro Élevage, on the farm",
+    founderTitle: "Darou Thiaw", founderCopy: "Founder — building an agro-élevage legacy in Senegal."
   },
   about: {
-    eyebrow: "About us", title1: "La qualité d'élevage,", title2: "le goût du terroir.",
-    lead: "Darou Thiaw Agro Élevage is a working farm led by Babacar Thiaw — built on patient breeding, real soil, and relationships that last longer than a single delivery.",
+    eyebrow: "About us", title1: "The quality of livestock farming,", title2: "the taste of the terroir.",
+    lead: "Darou Thiaw Agro Élevage is a working farm led by Darou Thiaw — built on patient breeding, real soil, and relationships that last longer than a single delivery.",
     beginning: "The beginning", beginningTitle: "One coop, one promise", beginningCopy: "Darou Thiaw Agro Élevage started with a small flock and a refusal to compromise: healthy birds, clean feed, open ground, and full transparency with every buyer.",
     land: "Growing the land", landTitle: "From poultry to full harvest", landCopy: "Fruit trees and vegetable beds followed the coops. Today the farm runs mixed agriculture so partners can source several categories from one supplier they already trust.",
     today: "Today", todayTitle: "Serving kitchens and communities", todayCopy: "We supply households, restaurants and resellers with steady volumes and consistent quality — and we keep the availability list updated as the seasons change.",
@@ -59,7 +59,7 @@ const en = {
   footer: {
     tagline: "Farm-direct poultry, fruits and vegetables for families, restaurants and resellers — grown with care and delivered fresh.",
     explore: "Explore", getInTouch: "Get in touch", service: "Service", rights: "All rights reserved.",
-    subtitle: "La qualité d'élevage, le goût du terroir.", home: "Home", about: "About Us", coming: "What is Coming"
+    subtitle: "Quality rearing, the taste of the terroir.", home: "Home", about: "About Us", coming: "What is Coming"
   }
 } as const;
 export default en;

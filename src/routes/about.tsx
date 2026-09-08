@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/i18n/LanguageContext";
-
 import { Layout, PageHero } from "@/components/site/Layout";
 import { RevealGroup, RevealItem } from "@/components/site/Reveal";
 import { TiltCard } from "@/components/site/TiltCard";
@@ -54,7 +53,7 @@ function About() {
             <TiltCard className="grain-overlay overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-lift)]">
               <img
                 src={owner}
-                alt="Babacar Thiaw on the farm"
+                alt="Darou Thiaw on the farm"
                 width={1008}
                 height={1312}
                 loading="lazy"
