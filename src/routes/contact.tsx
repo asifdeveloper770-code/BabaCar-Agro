@@ -63,6 +63,20 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const [interest, setInterest] = useState<string>("Chickens");
 
+  // Official WhatsApp SVG Icon Component
+  function WhatsAppIcon({ className = "size-4" }: { className?: string }) {
+    return (
+      <svg
+        className={className}
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006L2 22l5.129-1.343c1.46.797 3.109 1.216 4.88 1.217h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.667-1.038-5.174-2.925-7.06A9.923 9.923 0 0012.012 2zm5.836 14.126c-.244.688-1.427 1.314-1.969 1.397-.502.077-1.151.109-1.851-.115-.432-.138-1.002-.325-1.745-.646-3.13-1.353-5.171-4.512-5.328-4.721-.157-.209-1.272-1.693-1.272-3.23 0-1.538.802-2.295 1.085-2.603.283-.308.618-.385.824-.385.206 0 .412.002.592.01.19.008.448-.072.701.536.258.621.876 2.138.953 2.293.077.155.129.336.026.543-.103.207-.155.336-.309.516-.154.18-.324.402-.463.54-.154.155-.315.324-.135.633.18.309.802 1.321 1.72 2.139 1.181 1.05 2.177 1.376 2.486 1.53.309.155.489.129.67-.077.18-.206.772-.901.978-1.21.206-.309.412-.258.695-.155.283.103 1.799.849 2.108 1.003.309.155.515.232.592.361.077.129.077.747-.167 1.435z" />
+      </svg>
+    );
+  }
+
   return (
     <Layout>
       <PageHero
@@ -140,11 +154,10 @@ function Contact() {
                         type="button"
                         whileTap={{ scale: 0.94 }}
                         onClick={() => setInterest(item)}
-                        className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-                          interest === item
-                            ? "border-primary bg-primary text-primary-foreground"
-                            : "border-border bg-card text-secondary hover:border-primary"
-                        }`}
+                        className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${interest === item
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-border bg-card text-secondary hover:border-primary"
+                          }`}
                       >
                         {item}
                       </motion.button>
@@ -186,24 +199,52 @@ function Contact() {
           <RevealItem>
             <div className="surface-card rounded-3xl p-7">
               <p className="eyebrow">{t("contact.direct")}</p>
-              <a
-                href="tel:+19013199938"
-                className="mt-3 flex items-center gap-2 text-lg font-bold text-secondary"
-              >
-                <Phone className="size-5 text-primary" /> 901-319-9938
-              </a>
-              <a
-                href="tel:+19013199938"
-                className="mt-3 flex items-center gap-2 text-lg font-bold text-secondary"
-              >
-                <Phone className="size-5 text-primary" /> 77-754-8004
-              </a>
-              <a
-                href="mailto:thiaw@att.net"
-                className="mt-2 flex items-center gap-2 text-lg font-bold text-secondary"
-              >
-                <Mail className="size-5 text-primary" /> thiaw@att.net
-              </a>
+
+              <div className="mt-4 space-y-3">
+                {/* WhatsApp Section */}
+                <div>
+                  <span className="text-xs uppercase font-medium tracking-wider text-muted-foreground block mb-1">
+                    WhatsApp
+                  </span>
+                  <a
+                    href="https://wa.me/19013199938"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 text-lg font-bold text-secondary hover:text-primary transition-colors"
+                  >
+                    <WhatsAppIcon className="size-5 text-[#25D366]" />
+                    <span>+1 901-319-9938</span>
+                  </a>
+                </div>
+
+                {/* Local Phone Section */}
+                <div>
+                  <span className="text-xs uppercase font-medium tracking-wider text-muted-foreground block mb-1">
+                    Local
+                  </span>
+                  <a
+                    href="tel:+221777548004"
+                    className="flex items-center gap-2.5 text-lg font-bold text-secondary hover:text-primary transition-colors"
+                  >
+                    <Phone className="size-5 text-primary" />
+                    <span>+221 77 754 80 04</span>
+                  </a>
+                </div>
+
+                {/* Email Section */}
+                <div className="pt-1">
+                  <span className="text-xs uppercase font-medium tracking-wider text-muted-foreground block mb-1">
+                    Email
+                  </span>
+                  <a
+                    href="mailto:thiaw@att.net"
+                    className="flex items-center gap-2.5 text-lg font-bold text-secondary hover:text-primary transition-colors"
+                  >
+                    <Mail className="size-5 text-primary" />
+                    <span>thiaw@att.net</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </RevealItem>
           <RevealItem>
