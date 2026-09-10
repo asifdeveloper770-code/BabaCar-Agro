@@ -170,7 +170,7 @@ function Services() {
                       <motion.img
                         src={story.image}
                         alt={t(story.titleKey)}
-                        className="h-full w-full object-cover"
+                        className="h-auto w-full object-cover"
                         whileHover={{ scale: 1.06 }}
                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                       />
