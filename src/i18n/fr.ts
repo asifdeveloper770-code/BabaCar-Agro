@@ -1,4 +1,5 @@
 import type { TranslationSchema } from "@/i18n/en";
+
 const fr: TranslationSchema = {
   nav: { home: "Accueil", about: "À propos", services: "Services", coming: "À venir", contact: "le contact", order: "Commander", menuAria: "Ouvrir le menu", languageAria: "Changer de langue" },
   languageNames: { en: "Anglais", fr: "Français" },
@@ -36,7 +37,19 @@ const fr: TranslationSchema = {
     consumerCopy: "Caisses familiales et commandes à l'unité, livrées fraîches avec des prix clairs.",
     restaurantCopy: "Livraisons hebdomadaires régulières, qualité constante et volumes fiables.",
     resellerCopy: "Lots en volume, tarifs de gros et mises à jour des disponibilités avant chaque cycle.",
-    builtFor: "Pensé pour", request: "Demander un tarif"
+    builtFor: "Pensé pour", request: "Demander un tarif",
+    farmers: {
+      eyebrow: "Notre standard agricole",
+      title: "Culture artisanale & soins directs",
+      lead: "Chaque récolte est cultivée directement par des agriculteurs locaux dévoués, utilisant l'irrigation goutte-à-goutte, un enrichissement biologique et un ramassage manuel minutieux.",
+      harvestTitle: "Récolte fraîche d'arachides et de cultures",
+      harvestCopy: "Cultivées dans un sol riche en nutriments et récoltées à la main à pleine maturité pour garantir une qualité optimale, un goût authentique et un rendement maximal.",
+      harvestBadge: "Récolte manuelle",
+      soilTitle: "Préparation de précision & goutte-à-goutte",
+      soilCopy: "Notre équipe prépare manuellement chaque parcelle avec des lignes de goutte-à-goutte efficaces pour économiser l'eau tout en fournissant les nutriments aux racines.",
+      soilBadge: "Agriculture durable",
+      directFromField: "Opérations directes de la ferme"
+    }
   },
   coming: {
     eyebrow: "À venir", title1: "La prochaine récolte est", title2: "une invitation à investir.",
@@ -63,4 +76,5 @@ const fr: TranslationSchema = {
     subtitle: "La qualité d'élevage, le goût du terroir.", home: "Accueil", about: "À propos", coming: "À venir"
   }
 };
+
 export default fr;

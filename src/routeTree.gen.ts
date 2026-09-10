@@ -14,6 +14,11 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as WhatsComingRouteImport } from './routes/whats-coming'
+import { Route as AdminAdminRouteImport } from './routes/admin/_admin'
+import { Route as AdminLoginRouteImport } from './routes/admin/login'
+import { Route as AdminAdminContactsRouteImport } from './routes/admin/_admin.contacts'
+import { Route as AdminAdminOverviewRouteImport } from './routes/admin/_admin.overview'
+import { Route as AdminAdminServicesRouteImport } from './routes/admin/_admin.services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +45,31 @@ const WhatsComingRoute = WhatsComingRouteImport.update({
   path: '/whats-coming',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminAdminRoute = AdminAdminRouteImport.update({
+  id: '/admin/_admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAdminContactsRoute = AdminAdminContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => AdminAdminRoute,
+} as any)
+const AdminAdminOverviewRoute = AdminAdminOverviewRouteImport.update({
+  id: '/overview',
+  path: '/overview',
+  getParentRoute: () => AdminAdminRoute,
+} as any)
+const AdminAdminServicesRoute = AdminAdminServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => AdminAdminRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +77,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/whats-coming': typeof WhatsComingRoute
+  '/admin': typeof AdminAdminRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/contacts': typeof AdminAdminContactsRoute
+  '/admin/overview': typeof AdminAdminOverviewRoute
+  '/admin/services': typeof AdminAdminServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +89,11 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/whats-coming': typeof WhatsComingRoute
+  '/admin': typeof AdminAdminRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/contacts': typeof AdminAdminContactsRoute
+  '/admin/overview': typeof AdminAdminOverviewRoute
+  '/admin/services': typeof AdminAdminServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +102,49 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/whats-coming': typeof WhatsComingRoute
+  '/admin/_admin': typeof AdminAdminRouteWithChildren
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/_admin/contacts': typeof AdminAdminContactsRoute
+  '/admin/_admin/overview': typeof AdminAdminOverviewRoute
+  '/admin/_admin/services': typeof AdminAdminServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/services' | '/whats-coming'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/whats-coming'
+    | '/admin'
+    | '/admin/login'
+    | '/admin/contacts'
+    | '/admin/overview'
+    | '/admin/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/services' | '/whats-coming'
-  id: '__root__' | '/' | '/about' | '/contact' | '/services' | '/whats-coming'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/whats-coming'
+    | '/admin'
+    | '/admin/login'
+    | '/admin/contacts'
+    | '/admin/overview'
+    | '/admin/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/whats-coming'
+    | '/admin/_admin'
+    | '/admin/login'
+    | '/admin/_admin/contacts'
+    | '/admin/_admin/overview'
+    | '/admin/_admin/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +153,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
   WhatsComingRoute: typeof WhatsComingRoute
+  AdminAdminRoute: typeof AdminAdminRouteWithChildren
+  AdminLoginRoute: typeof AdminLoginRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,8 +194,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhatsComingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/_admin': {
+      id: '/admin/_admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/_admin/contacts': {
+      id: '/admin/_admin/contacts'
+      path: '/contacts'
+      fullPath: '/admin/contacts'
+      preLoaderRoute: typeof AdminAdminContactsRouteImport
+      parentRoute: typeof AdminAdminRoute
+    }
+    '/admin/_admin/overview': {
+      id: '/admin/_admin/overview'
+      path: '/overview'
+      fullPath: '/admin/overview'
+      preLoaderRoute: typeof AdminAdminOverviewRouteImport
+      parentRoute: typeof AdminAdminRoute
+    }
+    '/admin/_admin/services': {
+      id: '/admin/_admin/services'
+      path: '/services'
+      fullPath: '/admin/services'
+      preLoaderRoute: typeof AdminAdminServicesRouteImport
+      parentRoute: typeof AdminAdminRoute
+    }
   }
 }
+
+interface AdminAdminRouteChildren {
+  AdminAdminContactsRoute: typeof AdminAdminContactsRoute
+  AdminAdminOverviewRoute: typeof AdminAdminOverviewRoute
+  AdminAdminServicesRoute: typeof AdminAdminServicesRoute
+}
+
+const AdminAdminRouteChildren: AdminAdminRouteChildren = {
+  AdminAdminContactsRoute: AdminAdminContactsRoute,
+  AdminAdminOverviewRoute: AdminAdminOverviewRoute,
+  AdminAdminServicesRoute: AdminAdminServicesRoute,
+}
+
+const AdminAdminRouteWithChildren = AdminAdminRoute._addFileChildren(
+  AdminAdminRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -125,6 +254,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
   WhatsComingRoute: WhatsComingRoute,
+  AdminAdminRoute: AdminAdminRouteWithChildren,
+  AdminLoginRoute: AdminLoginRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

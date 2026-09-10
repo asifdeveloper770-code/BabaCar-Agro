@@ -35,7 +35,19 @@ const en = {
     consumerCopy: "Family crates and single orders, delivered fresh with clear pricing.",
     restaurantCopy: "Recurring weekly deliveries, consistent grading, and dependable volume.",
     resellerCopy: "Bulk lots, wholesale rates and availability updates before each cycle.",
-    builtFor: "Built for", request: "Request pricing"
+    builtFor: "Built for", request: "Request pricing",
+    farmers: {
+      eyebrow: "Our Farming Standard",
+      title: "Hands-On Cultivation & Direct Care",
+      lead: "Every crop and yield is raised directly by dedicated local farmers using drip irrigation, organic enrichment, and careful manual harvesting.",
+      harvestTitle: "Fresh Groundnut & Crop Harvesting",
+      harvestCopy: "Grown in nutrient-dense soil and hand-pulled at peak maturity to ensure pristine quality, optimal taste, and maximal yield for wholesale and retail.",
+      harvestBadge: "Manual Harvest",
+      soilTitle: "Precision Soil Prep & Drip Lines",
+      soilCopy: "Our team manually prepares every bed with efficient drip irrigation lines to conserve water while delivering steady nutrients right to the root.",
+      soilBadge: "Sustainable Farming",
+      directFromField: "Farm Direct Operations"
+    }
   },
   coming: {
     eyebrow: "What is coming", title1: "The next harvest is", title2: "an invitation to invest.",
@@ -62,7 +74,9 @@ const en = {
     subtitle: "Quality rearing, the taste of the terroir.", home: "Home", about: "About Us", coming: "What is Coming"
   }
 } as const;
+
 export default en;
+
 export type Widen<T> = T extends string
   ? string
   : T extends readonly (infer U)[]
@@ -71,4 +85,4 @@ export type Widen<T> = T extends string
       ? { [K in keyof T]: Widen<T[K]> }
       : T;
 
-export type TranslationSchema = Widen<typeof en>;
+export type TranslationSchema = Widen<typeof en>; 

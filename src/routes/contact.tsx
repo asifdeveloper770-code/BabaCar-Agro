@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { Check, Mail, Phone, Send } from "lucide-react";
+import { Check, Loader2, Mail, Phone, Send } from "lucide-react";
 
 import { Layout, PageHero } from "@/components/site/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { RevealGroup, RevealItem } from "@/components/site/Reveal";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -62,6 +63,44 @@ function Contact() {
   const { t } = useLanguage();
   const [sent, setSent] = useState(false);
   const [interest, setInterest] = useState<string>("Chickens");
+
+  // const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  // const [interest, setInterest] = useState<string>("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubmitting(true);
+    setErrorMsg(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const templateParams = {
+      from_name: formData.get("name"),
+      from_email: formData.get("email"),
+      phone: formData.get("phone"),
+      interest: interest || "Not Specified",
+      message: formData.get("message"),
+    };
+
+    try {
+      await emailjs.send(
+        import.meta.env["VITE_EMAILJS_SERVICE_ID"],   // e.g., 'service_xxx'
+        import.meta.env["VITE_EMAILJS_TEMPLATE_ID"],  // e.g., 'template_xxx'
+        templateParams,
+        import.meta.env["VITE_EMAILJS_PUBLIC_KEY"]     // e.g., 'user_xxx'
+      );
+
+      setSent(true);
+    } catch (err: any) {
+      console.error("EmailJS error:", err);
+      setErrorMsg(t("contact.error") || "Failed to send message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   // Official WhatsApp SVG Icon Component
   function WhatsAppIcon({ className = "size-4" }: { className?: string }) {
@@ -133,17 +172,20 @@ function Contact() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  setSent(true);
-                }}
+                onSubmit={handleSubmit}
                 className="space-y-5"
               >
+                {errorMsg && (
+                  <div className="rounded-xl bg-destructive/10 p-3 text-xs font-semibold text-destructive">
+                    {errorMsg}
+                  </div>
+                )}
+
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <Field label={t("contact.fullName")} name="name" placeholder={t("contact.namePlaceholder")} />
+                  <Field label={t("contact.fullName")} name="name" required placeholder={t("contact.namePlaceholder")} />
                   <Field label={t("contact.phone")} name="phone" type="tel" placeholder={t("contact.phonePlaceholder")} />
                 </div>
-                <Field label={t("contact.email")} name="email" type="email" placeholder={t("contact.emailPlaceholder")} />
+                <Field label={t("contact.email")} name="email" type="email" required placeholder={t("contact.emailPlaceholder")} />
 
                 <div>
                   <span className="text-sm font-semibold text-secondary">{t("contact.interest")}</span>
@@ -155,8 +197,8 @@ function Contact() {
                         whileTap={{ scale: 0.94 }}
                         onClick={() => setInterest(item)}
                         className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${interest === item
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "border-border bg-card text-secondary hover:border-primary"
+                            ? "border-primary bg-primary text-primary-foreground"
+                            : "border-border bg-card text-secondary hover:border-primary"
                           }`}
                       >
                         {item}
@@ -183,12 +225,22 @@ function Contact() {
 
                 <motion.button
                   type="submit"
+                  disabled={submitting}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-lift)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-lift)] disabled:opacity-50"
                 >
-                  {t("contact.send")}
-                  <Send className="size-4" />
+                  {submitting ? (
+                    <>
+                      Sending...
+                      <Loader2 className="size-4 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      {t("contact.send")}
+                      <Send className="size-4" />
+                    </>
+                  )}
                 </motion.button>
               </motion.form>
             )}
