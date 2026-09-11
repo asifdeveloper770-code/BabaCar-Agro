@@ -275,11 +275,11 @@ function Contact() {
                     Local
                   </span>
                   <a
-                    href="tel:+221777548004"
+                    href="tel:+777548004"
                     className="flex items-center gap-2.5 text-lg font-bold text-secondary hover:text-primary transition-colors"
                   >
                     <Phone className="size-5 text-primary" />
-                    <span>+221 77 754 80 04</span>
+                    <span>77 754 80 04</span>
                   </a>
                 </div>
 
