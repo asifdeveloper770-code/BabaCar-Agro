@@ -65,7 +65,7 @@ export function Footer() {
             <span className="text-xs uppercase font-medium opacity-60 block mb-0.5">Local</span>
             <a href="tel:+221777548004" className="flex items-center gap-2 opacity-90 hover:opacity-100 transition-opacity">
               <Phone className="size-4" />
-              <span>+771 86 49 51</span>(YAO)
+              <span>+771 86 4951</span>(YAO)
             </a>
           </div>
 
