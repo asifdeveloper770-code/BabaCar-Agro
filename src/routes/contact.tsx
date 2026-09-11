@@ -275,11 +275,11 @@ function Contact() {
                     Local
                   </span>
                   <a
-                    href="tel:+777548004"
+                    href="tel:+771864951"
                     className="flex items-center gap-2.5 text-lg font-bold text-secondary hover:text-primary transition-colors"
                   >
                     <Phone className="size-5 text-primary" />
-                    <span>77 754 80 04</span>
+                    <span>+771 86 4951</span>(YAO)
                   </a>
                 </div>
 
